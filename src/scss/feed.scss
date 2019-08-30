@@ -1,0 +1,51 @@
+.newsFeed{
+    .username{
+        background-color: #4267b2;
+        color: #fff;
+        font-weight: bold;
+        position: absolute;
+        top: 10px;
+        margin-left: 270px;
+    }
+    .signOut{
+        position: absolute;
+        top: 11px;
+        background-color: #4267b2;
+        margin-left: 467px;
+        height: 27px;
+        width: 20px;
+        cursor: pointer;
+    }
+    .fb-navbar a{
+        color: #07296d;
+    }
+    .fb-sidebar-left{
+        display: inline-block;
+        width: auto;
+        float: left;
+    }
+    .feed-container{
+        background-color: #e9ebee;
+        padding: 10px 0; 
+    }
+    .fb-sidebar-left{
+        .username{
+            background-color: #e9ebee;
+            color: #000;
+            top: 67px;
+            margin-left: 378px;
+            left: 0;
+            width: 100px;
+        }
+    }
+    .fb-sidebar-right{
+        display: inline-block;
+        width: 22%;
+        float: right;
+    }
+    .fb-wall{
+        display: inline-block;
+        width: auto;
+        height: -webkit-fill-available;
+    }
+}
