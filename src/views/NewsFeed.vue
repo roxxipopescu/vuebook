@@ -2,7 +2,7 @@
   <div class="newsFeed">
     <div class="fb-navbar">
       <img :src="navbar" />
-      <span class="username">Roxana</span>
+      <span class="username">{{username}}</span>
       <router-link to="/" >
         <span class="signOut" >
           <font-awesome-icon icon="sign-out-alt" size="lg" />
@@ -12,7 +12,7 @@
     <div class="feed-container">
       <div class="fb-sidebar-left">
         <img :src="sidebarLeft"/>
-        <span class="username">Roxana</span>
+        <span class="username">{{username}}</span>
       </div>
       <div class="fb-wall">
         <FacebookWall></FacebookWall>
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-// @ is an alias to /src
+import {eventBus} from "../main";
 import FacebookWall from '@/components/FacebookWall.vue'
 
 export default {
@@ -38,8 +38,18 @@ export default {
       navbar: require('../assets/navbar.png'),
       sidebarLeft: require('../assets/sideleft.png'),
       sidebarRight: require('../assets/sideright.png'),
+      username: "",
     }
   },
+
+  created(){
+    eventBus.$on('GET_LOGGED_USER', (user) => { 
+        this.username = user;
+        console.log(user);
+    });
+    console.log(this.username);
+  },
+
   methods: {
     
   },

@@ -18,7 +18,7 @@
     ],
     "users": [
         { "name": "Roxana Popescu", "password": "1234", "email": "rox@a.com" },
-        { "name": "Monica Rahovan", "password": "1234", "email": "ady@a.com" },
+        { "name": "Monica Rahovan", "password": "1234", "email": "moni@a.com" },
         { "name": "Valentin Zaharia", "password": "1234", "email": "valy@a.com" }
     ]
 }

@@ -24,6 +24,7 @@
 
 <script>
 import axios from 'axios'
+import {eventBus} from "../main";
 
 export default {
   name: 'login',
@@ -57,6 +58,7 @@ export default {
         login(){
           this.users.forEach((user) => {
             if (user.email == this.email && user.password == this.password){
+              eventBus.$emit('GET_LOGGED_USER', user.name); console.log(user.name);
               this.$emit("authenticated", true);
               this.$router.replace({ name: "feed" });
             }
