@@ -7,8 +7,14 @@
     <div class="navbar">
         <img class="logo" :src="facebookLogo"/>
         <form @submit.prevent="login()" class="credentials">
-            <input class="form-control username" type="text" v-model="email" required/>
-            <input class="form-control" type="password" v-model="password" required/>
+            <validation-provider class="userName" rules="required" v-slot="{ errors }">
+              <input class="form-control username" type="text" v-model="email"/>
+              <span>{{ errors[0] }}</span>
+            </validation-provider>
+            <validation-provider class="userName" rules="required" v-slot="{ errors }">
+              <input class="form-control" type="password" v-model="password" required/>
+              <span>{{ errors[0] }}</span>
+            </validation-provider>
             <button class="login btn" type="submit">{{logIn}}</button>
         </form>    
     </div>
@@ -24,7 +30,6 @@
 
 <script>
 import axios from 'axios'
-import {eventBus} from "../main";
 
 export default {
   name: 'login',
@@ -58,7 +63,7 @@ export default {
         login(){
           this.users.forEach((user) => {
             if (user.email == this.email && user.password == this.password){
-              eventBus.$emit('GET_LOGGED_USER', user.name); console.log(user.name);
+              this.$store.commit('newLogIn', user.name);
               this.$emit("authenticated", true);
               this.$router.replace({ name: "feed" });
             }

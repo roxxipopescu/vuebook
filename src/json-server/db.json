@@ -1,24 +1,79 @@
 {
-    "posts": [
-        {
-            "id": 1,
-            "type": "txt",
-            "created_at": "2019-08-28T08:38:00.000+01:00",
-            "location": "London",
-            "likes": 1,
-            "user_name": "Roxana Popescu",
-            "user_id": 2,
-            "data": {
-                "content": "Thank you for all the birtday wishes"
-            }
-        }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "users": [
-        { "name": "Roxana Popescu", "password": "1234", "email": "rox@a.com" },
-        { "name": "Monica Rahovan", "password": "1234", "email": "moni@a.com" },
-        { "name": "Valentin Zaharia", "password": "1234", "email": "valy@a.com" }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "type": "txt",
+      "created_at": "2019-08-28T08:38:00.000+01:00",
+      "location": "London",
+      "likes": 1,
+      "user_name": "Roxana Popescu",
+      "user_id": 2,
+      "data": {
+        "content": "Thank you for all the birtday wishes"
+      }
+    },
+    {
+      "id": 2,
+      "type": "txt",
+      "likes": 0,
+      "created_at": "2019-09-02T14:22:43.861Z",
+      "user_name": "Roxana Popescu",
+      "user_id": "1"
+    },
+    {
+      "id": 3,
+      "type": "txt",
+      "likes": 0,
+      "created_at": "2019-09-02T14:25:14.522Z",
+      "user_name": "Roxana Popescu",
+      "user_id": "1"
+    },
+    {
+      "id": 4,
+      "type": "txt",
+      "likes": 0,
+      "created_at": "2019-09-02T14:26:04.192Z",
+      "user_name": "Roxana Popescu",
+      "user_id": "1"
+    },
+    {
+      "id": 5,
+      "type": "txt",
+      "data": {
+        "content": "cevaveve"
+      },
+      "location": "Cluj-Napoca",
+      "likes": 0,
+      "created_at": "2019-09-02T14:48:49.876Z",
+      "user_name": "Roxana Popescu",
+      "user_id": "1"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "name": "Roxana Popescu",
+      "password": "1234",
+      "email": "rox@a.com",
+      "id": "1"
+    },
+    {
+      "name": "Monica Rahovan",
+      "password": "1234",
+      "email": "moni@a.com",
+      "id": "2"
+    },
+    {
+      "name": "Valentin Zaharia",
+      "password": "1234",
+      "email": "valy@a.com",
+      "id": "3"
+    }
+  ]
 }

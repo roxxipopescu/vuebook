@@ -45,6 +45,16 @@
             margin-right: 32%;
         }
     }
+    .userName{
+        position: relative;
+        span{
+            position: absolute;
+            top: 34px;
+            background-color: red;
+            left: 0;
+            border-radius: 5px;
+        }
+    }
     .forgotAccount{
         background-color: #3f5c9a;
         height: 30px;
