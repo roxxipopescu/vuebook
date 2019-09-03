@@ -9,12 +9,12 @@ import { ValidationProvider, extend } from 'vee-validate';
 import { required, max } from 'vee-validate/dist/rules';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSignOutAlt, faPencilAlt, faVideo } from '@fortawesome/free-solid-svg-icons'
-import { faImage, faSmile } from '@fortawesome/free-regular-svg-icons'
+import { faImage, faSmile, faThumbsUp, faComments } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 export const eventBus = new Vue();
 
-library.add(faSignOutAlt, faPencilAlt, faImage, faVideo, faSmile)
+library.add(faSignOutAlt, faPencilAlt, faImage, faVideo, faSmile, faThumbsUp, faComments)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.component('ValidationProvider', ValidationProvider);

@@ -48,6 +48,7 @@
     .fb-wall{
         display: inline-block;
         width: auto;
-        height: -webkit-fill-available;
+        height: 900px;
+        overflow-y: auto;
     }
 }
