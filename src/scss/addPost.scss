@@ -1,0 +1,60 @@
+.addPost{
+    border: 1px solid #bdbaba;
+    background-color: white;
+    border-radius: 3px;
+    padding-bottom: 15px;
+    .postSmth{
+        position: relative;
+    }
+    .invisibleFields{
+        padding-left: 15px;
+        text-align: left;
+        .imgUrlLbl{
+            margin-right: 25px;
+        }
+        
+    }
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .7s;
+    }
+    .fade-enter, .fade-leave-to{
+        opacity: 0;
+    }
+    span span{
+        font-size: 14px;
+        color: #a50707;
+    }
+    .postImg, .placeholderLive, .post{
+        cursor: pointer;
+        padding-left: 2px;
+        padding-right: 30px;
+    }
+    .actions{
+        padding: 5px 0;
+        border-bottom: 1px solid #d6d6d6;
+        height: 44px;
+        margin: 0 12px;
+    }
+    .postTxt{
+        width: 400px;
+        margin-left: 80px;
+        border: 0px;
+        margin-top: 15px;
+    }
+    .smiley{
+        position: absolute;
+        top: 120px;
+        right: 20px;
+    }
+    .imageUrl{
+        margin-top: 20px;
+        width: 70%;
+        display: inline-block;
+    }
+    .placeholder{
+        width: 60px;
+        position: absolute;
+        top: 55px;
+        left: 10px;
+    }
+}

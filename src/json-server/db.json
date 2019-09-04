@@ -1,52 +1,45 @@
 {
   "posts": [
     {
-      "id": 1,
-      "type": "txt",
-      "created_at": "2019-08-28",
-      "location": "London",
-      "likes": 20,
-      "liked": [
-        "Roxana Popescu",
-        "Valentin Zaharia"
-      ],
-      "user_name": "Roxana Popescu",
-      "user_id": 2,
       "data": {
-        "content": "Thank you for all the birtday wishes"
-      }
+        "content": "ce faci tu?"
+      },
+      "type": "txt",
+      "location": "Cluj-Napoca",
+      "likes": 1,
+      "liked": [
+        "Monica Rahovan"
+      ],
+      "created_at": "2019-09-04",
+      "user_name": "Monica Rahovan",
+      "user_id": "2",
+      "id": 1
     },
     {
       "data": {
-        "caption": "Sunset",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Sunset_2007-1.jpg/800px-Sunset_2007-1.jpg"
+        "content": "ceva2"
       },
-      "type": "img",
+      "type": "txt",
       "location": "Cluj-Napoca",
-      "likes": 2,
-      "created_at": "2019-09-03",
+      "likes": 1,
+      "liked": [
+        "Monica Rahovan"
+      ],
+      "created_at": "2019-09-04",
       "user_name": "Monica Rahovan",
       "user_id": "2",
       "id": 2
-    },
-    {
-      "data": {
-        "caption": "Best sunrise ever!!!",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Hazy_Crazy_Sunrise.jpg/1920px-Hazy_Crazy_Sunrise.jpg"
-      },
-      "type": "img",
-      "location": "Cluj-Napoca",
-      "likes": 0,
-      "created_at": "2019-09-03",
-      "user_name": "Valentin Zaharia",
-      "user_id": "3",
-      "id": 3
     }
   ],
   "comments": [
     {
       "id": 1,
-      "body": "some comment",
+      "body": "Kisses, love!",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "Whishing you all the best!",
       "postId": 1
     }
   ],
