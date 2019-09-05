@@ -3,8 +3,8 @@
     <div class="fb-navbar">
       <img :src="navbar" />
       <span class="username">{{$store.getters.loggedUser}}</span>
-      <router-link to="/" >
-        <span class="signOut" >
+      <router-link to="/">
+        <span class="signOut" v-on:click="signOut()">
           <font-awesome-icon icon="sign-out-alt" size="lg" />
         </span>
       </router-link>
@@ -26,6 +26,7 @@
 
 <script>
 import FacebookWall from '@/components/FacebookWall.vue'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'feed',
@@ -41,12 +42,22 @@ export default {
     }
   },
 
-  created(){
-   
+  computed:{
+    ...mapGetters([
+      'updatedPosts'
+      ])
   },
- 
+
   methods: {
-    
+    signOut(){
+      this.$store.dispatch('getPosts');
+
+      for(const likedPost of this.updatedPosts){ 
+        let postId = likedPost.id;
+        likedPost.likedByActiveUser = false;
+        this.$store.dispatch('updatePost', {postId, likedPost});
+      }
+    }
   },
   
 }

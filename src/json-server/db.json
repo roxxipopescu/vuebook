@@ -6,29 +6,48 @@
       },
       "type": "txt",
       "location": "Cluj-Napoca",
-      "likes": 1,
+      "likes": 2,
       "liked": [
+        "Monica Rahovan",
         "Monica Rahovan"
       ],
       "created_at": "2019-09-04",
       "user_name": "Monica Rahovan",
       "user_id": "2",
-      "id": 1
+      "id": 1,
+      "likedByActiveUser": false
     },
     {
       "data": {
-        "content": "ceva2"
+        "caption": "My fav color iz sunset ",
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Red_sunset.jpg/333px-Red_sunset.jpg"
       },
-      "type": "txt",
+      "type": "img",
       "location": "Cluj-Napoca",
       "likes": 1,
       "liked": [
-        "Monica Rahovan"
+        "Valentin Zaharia"
       ],
-      "created_at": "2019-09-04",
-      "user_name": "Monica Rahovan",
-      "user_id": "2",
-      "id": 2
+      "created_at": "2019-09-05",
+      "user_name": "Valentin Zaharia",
+      "user_id": "3",
+      "id": 2,
+      "likedByActiveUser": false
+    },
+    {
+      "data": {
+        "caption": "me having fun with friends",
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Hipp_hipp_hurra%21_Konstn%C3%A4rsfest_p%C3%A5_Skagen_-_Peder_Severin_Kr%C3%B8yer.jpg/1280px-Hipp_hipp_hurra%21_Konstn%C3%A4rsfest_p%C3%A5_Skagen_-_Peder_Severin_Kr%C3%B8yer.jpg"
+      },
+      "type": "img",
+      "location": "Cluj-Napoca",
+      "likes": 0,
+      "liked": [],
+      "created_at": "2019-09-05",
+      "user_name": "Roxana Popescu",
+      "user_id": "1",
+      "id": 3,
+      "likedByActiveUser": false
     }
   ],
   "comments": [

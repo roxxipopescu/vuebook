@@ -96,6 +96,7 @@ export default {
       this.newPost.created_at = new Date().toJSON().slice(0,10).replace(/-/g,'-');
       this.newPost.user_name = this.$store.getters.loggedUser;
       this.newPost.user_id = this.getUserId(this.newPost.user_name);
+      this.newPost.likedByActiveUser = false;
       
       return this.newPost;
     },

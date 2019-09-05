@@ -18,7 +18,9 @@
        </div>
        <div class="likes" v-if="post.likes > 0">
          <font-awesome-icon :icon="['far','thumbs-up']" />
-         <span class="likeNb">{{post.likes}}</span>
+         <span v-if="post.likedByActiveUser && post.likes > 1" class="likeNb">{{youLiked}} {{post.likes-1}} {{others}}</span>
+         <span v-else-if="post.likedByActiveUser" class="likeNb">{{youLikedThis}}</span>
+         <span v-else class="likeNb">{{post.likes}}</span>
        </div>
        <div class="feedback">
         <a class="like btn" v-on:click="incrementLikes(post.id)">
@@ -37,11 +39,8 @@
 </template>
 
 <script>
-import axios from 'axios'
 import AddPost from './AddPost'
 import { mapGetters } from 'vuex'
-
-const baseURL = "http://localhost:3000/posts";
 
 export default {
   name: 'FacebookWall',
@@ -56,37 +55,34 @@ export default {
       likeTxt: "Like",
       likedTxt: "Liked",
       commentTxt: "Comment",
-      users: [],
-      isLiked: false,
+      youLiked: "You and",
+      youLikedThis: "You liked this",
+      others: "others",
     }
   },
 
   created(){
     this.$store.dispatch('getPosts');
 
-    for (const post of this.updatedPosts){
-      let postId = post.id;
-      for(const person of post.liked){
+    for (const likedPost of this.updatedPosts){
+      let postId = likedPost.id;
+      for(const person of likedPost.liked){
         if(person == this.$store.getters.loggedUser){
-          post.likedByActiveUser = true;
-          //this.$store.dispatch('updatePost', { postId, post});
+          likedPost.likedByActiveUser = true; 
+          this.$store.dispatch('updatePost', {postId, likedPost});
         }
       }
     }
+    console.log(this.updatedPosts);
 
-    this.$store.commit('getServerPosts', this.updatedPosts);
-
-    axios.get(`http://localhost:3000/users`).then((res) => {
-      this.users = res.data;
-    })
-    .catch((err) => {
-      console.log(err);
-    }); 
-    
+    this.$store.dispatch('getUsers');
   },
 
   computed:{
-    ...mapGetters(['updatedPosts'])
+    ...mapGetters([
+      'updatedPosts',
+      'users'
+      ])
   },
 
   methods: {
@@ -97,26 +93,18 @@ export default {
         }
       });
 
-      for(const person of likedPost.liked){
-        if(person == this.$store.getters.loggedUser){
-          this.isLiked = true;
-        }
-      }
-
-      if (this.isLiked){
+      if (likedPost.likedByActiveUser){
         for (let i=0; i<likedPost.liked.length; i++){
           if(likedPost.liked[i] == this.$store.getters.loggedUser){
             likedPost.likes--;
             likedPost.liked.splice(i, 1);
             this.isLiked = false;
-            //this.likeTxt = 'Like';
           }
         }
       }else{
           likedPost.likes++;
           likedPost.liked.push(this.$store.getters.loggedUser);
           this.isLiked = true;
-          //this.likeTxt = 'Liked';
       }
   
       this.$store.dispatch('updatePost', {postId, likedPost});
