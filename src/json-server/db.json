@@ -2,55 +2,118 @@
   "posts": [
     {
       "data": {
-        "content": "ce faci tu?"
+        "content": "ce ma pace Trufaroooom "
       },
       "type": "txt",
       "location": "Cluj-Napoca",
-      "likes": 1,
+      "likes": 4,
       "liked": [
-        "Valentin Zaharia"
+        "Valentin Zaharia",
+        "Gina Firte",
+        "Roxana Popescu"
       ],
-      "created_at": "2019-09-04",
-      "user_name": "Monica Rahovan",
-      "user_id": "2",
-      "id": 1,
-      "likedByActiveUser": true
+      "created_at": "2019-09-05",
+      "user_name": "Gina Firte",
+      "likedByActiveUser": false,
+      "id": 5
     },
     {
       "data": {
-        "caption": "My fav color iz sunset ",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Red_sunset.jpg/333px-Red_sunset.jpg"
+        "caption": "Pepe is my spirit animal.",
+        "link": "https://upload.wikimedia.org/wikipedia/en/thumb/6/63/Feels_good_man.jpg/200px-Feels_good_man.jpg"
       },
       "type": "img",
       "location": "Cluj-Napoca",
-      "likes": 3,
+      "likes": 2,
       "liked": [
         "Valentin Zaharia",
-        "Monica Rahovan",
+        "Roxana Popescu"
+      ],
+      "created_at": "2019-09-05",
+      "user_name": "Valentin Zaharia",
+      "likedByActiveUser": false,
+      "id": 6
+    },
+    {
+      "data": {
+        "content": "sa postam zic"
+      },
+      "type": "txt",
+      "location": "Cluj-Napoca",
+      "likes": 2,
+      "liked": [
+        "Valentin Zaharia",
+        "Roxana Popescu"
+      ],
+      "created_at": "2019-09-05",
+      "user_name": "Gina Firte",
+      "user_id": "2",
+      "likedByActiveUser": false,
+      "id": 7
+    },
+    {
+      "data": {
+        "content": "nu stiu ce sa mai postez"
+      },
+      "type": "txt",
+      "location": "Cluj-Napoca",
+      "likes": 2,
+      "liked": [
+        "Gina Firte",
         "Roxana Popescu"
       ],
       "created_at": "2019-09-05",
       "user_name": "Valentin Zaharia",
       "user_id": "3",
-      "id": 2,
-      "likedByActiveUser": true
+      "likedByActiveUser": false,
+      "id": 8
     },
     {
       "data": {
-        "caption": "me having fun with friends",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Hipp_hipp_hurra%21_Konstn%C3%A4rsfest_p%C3%A5_Skagen_-_Peder_Severin_Kr%C3%B8yer.jpg/1280px-Hipp_hipp_hurra%21_Konstn%C3%A4rsfest_p%C3%A5_Skagen_-_Peder_Severin_Kr%C3%B8yer.jpg"
+        "content": "sa vedem postare"
       },
-      "type": "img",
+      "type": "txt",
       "location": "Cluj-Napoca",
       "likes": 1,
       "liked": [
-        "Monica Rahovan"
+        "Gina Firte"
       ],
       "created_at": "2019-09-05",
       "user_name": "Roxana Popescu",
       "user_id": "1",
-      "id": 3,
-      "likedByActiveUser": false
+      "likedByActiveUser": false,
+      "id": 9
+    },
+    {
+      "data": {
+        "content": "ceva post"
+      },
+      "type": "txt",
+      "location": "Cluj-Napoca",
+      "likes": 1,
+      "liked": [
+        "Roxana Popescu"
+      ],
+      "created_at": "2019-09-05",
+      "user_name": "Roxana Popescu",
+      "user_id": "1",
+      "likedByActiveUser": false,
+      "id": 10
+    },
+    {
+      "data": {
+        "content": "sdfs"
+      },
+      "type": "txt",
+      "location": "Cluj-Napoca",
+      "likes": 1,
+      "liked": [
+        ""
+      ],
+      "created_at": "2019-09-05",
+      "user_name": "",
+      "likedByActiveUser": true,
+      "id": 11
     }
   ],
   "comments": [
@@ -73,9 +136,9 @@
       "id": "1"
     },
     {
-      "name": "Monica Rahovan",
+      "name": "Gina Firte",
       "password": "1234",
-      "email": "moni@a.com",
+      "email": "ginescu@a.com",
       "id": "2"
     },
     {

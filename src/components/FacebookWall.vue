@@ -40,7 +40,8 @@
 
 <script>
 import AddPost from './AddPost'
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
+import { setTimeout } from 'timers';
 
 export default {
   name: 'FacebookWall',
@@ -62,29 +63,24 @@ export default {
   },
 
   created(){
-    this.$store.dispatch('getPosts');
-
-    for (const likedPost of this.updatedPosts){
-      let postId = likedPost.id;
-      for(const person of likedPost.liked){
-        if(person == this.$store.getters.loggedUser){
-          likedPost.likedByActiveUser = true; 
-          this.$store.dispatch('updatePost', {postId, likedPost});
-        }
-      }
-    }
-
-    this.$store.dispatch('getUsers');
+    this.getPosts();
+    this.getUsers();
   },
 
   computed:{
     ...mapGetters([
       'updatedPosts',
-      'users'
-      ])
+      'users',
+      'loggedUser'
+    ])
   },
 
   methods: {
+    ...mapActions([
+      'getPosts',
+      'getUsers',
+      'updatePost'
+    ]),
     async incrementLikes(postId){
       let likedPost = this.updatedPosts.find((post) => {
         if(post.id == postId){

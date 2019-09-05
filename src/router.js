@@ -19,3 +19,6 @@ export default new Router({
     }
   ]
 })
+
+// TODO: protect /feed route
+// https://router.vuejs.org/guide/advanced/navigation-guards.html#global-before-guards

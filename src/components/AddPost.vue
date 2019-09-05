@@ -32,7 +32,7 @@
 <script>
 import axios from 'axios'
 import Vue from 'vue'
-import mapGetters from 'axios'
+import {mapGetters, mapActions} from 'axios'
 
 export default {
     name: 'AddPost',
@@ -56,10 +56,6 @@ export default {
       users: Array
     },
 
-    computed:{
-      ...mapGetters(['updatedPosts'])
-    },
-
     methods:{
       showFields(){
         this.imgPost = !this.imgPost;
@@ -71,12 +67,12 @@ export default {
       },
 
       getUserId(username){
-      for (let i = 0; i < this.users.length; i++){
-        if (username == this.users[i].name){
-          return this.users[i].id;
+        for (let i = 0; i < this.users.length; i++){
+          if (username == this.users[i].name){
+            return this.users[i].id;
+          }
         }
-      }
-    },
+      },
 
     newPostData(){
       this.newPost.data = {};
@@ -103,7 +99,7 @@ export default {
 
     async post(){
       this.$store.dispatch('addPost', this.newPostData());
-      
+
       this.postText = "";
       this.imgUrl = "";
       this.$refs.err1.innerHTML = "";
