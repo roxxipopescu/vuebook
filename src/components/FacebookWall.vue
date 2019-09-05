@@ -73,7 +73,6 @@ export default {
         }
       }
     }
-    console.log(this.updatedPosts);
 
     this.$store.dispatch('getUsers');
   },
@@ -93,18 +92,18 @@ export default {
         }
       });
 
-      if (likedPost.likedByActiveUser){
+      if (likedPost.likedByActiveUser){ 
         for (let i=0; i<likedPost.liked.length; i++){
           if(likedPost.liked[i] == this.$store.getters.loggedUser){
             likedPost.likes--;
             likedPost.liked.splice(i, 1);
-            this.isLiked = false;
+            likedPost.likedByActiveUser = false;
           }
         }
       }else{
           likedPost.likes++;
           likedPost.liked.push(this.$store.getters.loggedUser);
-          this.isLiked = true;
+          likedPost.likedByActiveUser = true;
       }
   
       this.$store.dispatch('updatePost', {postId, likedPost});

@@ -6,16 +6,15 @@
       },
       "type": "txt",
       "location": "Cluj-Napoca",
-      "likes": 2,
+      "likes": 1,
       "liked": [
-        "Monica Rahovan",
-        "Monica Rahovan"
+        "Valentin Zaharia"
       ],
       "created_at": "2019-09-04",
       "user_name": "Monica Rahovan",
       "user_id": "2",
       "id": 1,
-      "likedByActiveUser": false
+      "likedByActiveUser": true
     },
     {
       "data": {
@@ -24,15 +23,17 @@
       },
       "type": "img",
       "location": "Cluj-Napoca",
-      "likes": 1,
+      "likes": 3,
       "liked": [
-        "Valentin Zaharia"
+        "Valentin Zaharia",
+        "Monica Rahovan",
+        "Roxana Popescu"
       ],
       "created_at": "2019-09-05",
       "user_name": "Valentin Zaharia",
       "user_id": "3",
       "id": 2,
-      "likedByActiveUser": false
+      "likedByActiveUser": true
     },
     {
       "data": {
@@ -41,8 +42,10 @@
       },
       "type": "img",
       "location": "Cluj-Napoca",
-      "likes": 0,
-      "liked": [],
+      "likes": 1,
+      "liked": [
+        "Monica Rahovan"
+      ],
       "created_at": "2019-09-05",
       "user_name": "Roxana Popescu",
       "user_id": "1",
