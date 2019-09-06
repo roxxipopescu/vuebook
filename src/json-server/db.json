@@ -61,9 +61,8 @@
       },
       "type": "txt",
       "location": "Cluj-Napoca",
-      "likes": 2,
+      "likes": 1,
       "liked": [
-        "Gina Firte",
         "Roxana Popescu"
       ],
       "created_at": "2019-09-06",
@@ -139,6 +138,12 @@
       "postId": 9,
       "body": "hai ca ma pornesc",
       "id": 13
+    },
+    {
+      "user": "Gina Firte",
+      "postId": 9,
+      "body": "fireste, cu o sticla de vin la mine :D",
+      "id": 14
     }
   ],
   "users": [
