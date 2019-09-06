@@ -1,22 +1,8 @@
 <template>
   <div id="app">
-    <router-view @authenticated="setAuthenticated"/>
+    <router-view/>
   </div>
 </template>
-<script>
-export default {
-  data(){
-    return{
-      authenticated: false
-    }
-  },
-  methods: {
-    setAuthenticated(status) {
-      this.authenticated = status;
-    }
-  }
-}
-</script>
 
 <style lang="scss">
 #app {

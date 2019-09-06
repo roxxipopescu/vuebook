@@ -50,6 +50,7 @@ export default {
 
   methods: {
     signOut(){
+      this.$store.commit('isAuth', false);
       this.$store.dispatch('getPosts');
 
       for(const likedPost of this.updatedPosts){ 

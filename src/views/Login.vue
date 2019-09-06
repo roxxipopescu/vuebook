@@ -64,7 +64,7 @@ export default {
           this.users.forEach((user) => {
             if (user.email == this.email && user.password == this.password){
               this.$store.dispatch('persistLoggedUser', user.name);
-              this.$emit("authenticated", true);
+              this.$store.commit('isAuth', true);
               this.$router.replace({ name: "feed" });
             }
             else {

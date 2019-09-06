@@ -12,10 +12,14 @@ export default new Vuex.Store({
   state: {
     loggedUser: '', 
     posts: [],
-    users: []
+    users: [],
+    auth: false
   },
 
   mutations: {
+    isAuth(state, auth){
+      state.auth = auth;
+    },
     newLogIn(state, loggedUser){
       state.loggedUser = loggedUser;
     },
@@ -31,6 +35,10 @@ export default new Vuex.Store({
   },
 
   getters: {
+    authenticated: state => {
+      return state.auth
+    },
+
     loggedUser: state => {
       return state.loggedUser
     },
