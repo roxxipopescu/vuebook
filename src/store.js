@@ -7,12 +7,14 @@ Vue.use(Vuex)
 
 const baseURL = "http://localhost:3000/posts";
 const usersURL = "http://localhost:3000/users";
+const commentsURL = "http://localhost:3000/comments";
 
 export default new Vuex.Store({
   state: {
     loggedUser: '', 
     posts: [],
     users: [],
+    comments: [],
     auth: false
   },
 
@@ -25,6 +27,12 @@ export default new Vuex.Store({
     },
     getServerPosts(state, posts){
       state.posts = [...posts]; 
+    },
+    getExistingComments(state, comments){
+      state.comments = [...comments]; 
+    },
+    addNewComment(state, comment){
+      state.comments.push(comment);
     },
     addNewPost(state, post){
       state.posts.push(post);
@@ -41,6 +49,10 @@ export default new Vuex.Store({
 
     loggedUser: state => {
       return state.loggedUser
+    },
+
+    comments: state =>{
+      return state.comments
     },
 
     updatedPosts: state => { 
@@ -73,6 +85,16 @@ export default new Vuex.Store({
     async getPosts(state){
       let res = await axios.get(baseURL);
       state.commit('getServerPosts', res.data); 
+    },
+
+    async getComments(state){
+      let res = await axios.get(commentsURL);
+      state.commit('getExistingComments', res.data); 
+    },
+
+    async addComment(state, newComment){
+      let data = await axios.post(commentsURL, newComment);
+      state.commit('addNewComment', data.data); 
     },
 
     async addPost(state, newPost){

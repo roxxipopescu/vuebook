@@ -3,36 +3,7 @@
     <AddPost :users="users"></AddPost>
     <div class="existingPosts">
       <div class="userpost" v-for="post in updatedPosts" :key="post.id">
-        <img class="userPic" :src="placeholderImg">
-        <div class="postInfo">
-          <span class="usrname">{{post.user_name}}</span>
-          <span class="datetime">{{post.created_at}} - </span>
-          <span class="location">{{post.location}}</span>
-        </div>
-        <div class="description" v-if="post.type=='txt'">
-          {{post.data.content}}
-        </div>
-        <div class="description" v-else>
-          {{post.data.caption}}
-          <img class="postedimg" :src="post.data.link"/>
-       </div>
-       <div class="likes" v-if="post.likes > 0">
-         <font-awesome-icon :icon="['far','thumbs-up']" />
-         <span v-if="post.likedByActiveUser && post.likes > 1" class="likeNb">{{youLiked}} {{post.likes-1}} {{others}}</span>
-         <span v-else-if="post.likedByActiveUser" class="likeNb">{{youLikedThis}}</span>
-         <span v-else class="likeNb">{{post.likes}}</span>
-       </div>
-       <div class="feedback">
-        <a class="like btn" v-on:click="incrementLikes(post.id)">
-          <font-awesome-icon :icon="['far','thumbs-up']" />
-          <span v-if="post.likedByActiveUser">{{likedTxt}}</span>
-          <span v-else>{{likeTxt}}</span>
-        </a>
-        <a class="comment btn" v-on:click="addComments(post.id)">
-          <font-awesome-icon :icon="['far','comments']" />
-          {{commentTxt}}
-        </a>
-      </div>
+        <Post :post="post"></Post>
     </div>
   </div>
   </div>
@@ -40,13 +11,15 @@
 
 <script>
 import AddPost from './AddPost'
+import Post from './Post'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'FacebookWall',
 
   components: {
-    AddPost
+    AddPost,
+    Post
   },
 
   data: function(){
@@ -77,36 +50,10 @@ export default {
   methods: {
     ...mapActions([
       'getPosts',
-      'getUsers',
-      'updatePost'
+      'getUsers'
     ]),
-    async incrementLikes(postId){
-      let likedPost = this.updatedPosts.find((post) => {
-        if(post.id == postId){
-          return post;
-        }
-      });
-
-      if (likedPost.likedByActiveUser){ 
-        for (let i=0; i<likedPost.liked.length; i++){
-          if(likedPost.liked[i] == this.$store.getters.loggedUser){
-            likedPost.likes--;
-            likedPost.liked.splice(i, 1);
-            likedPost.likedByActiveUser = false;
-          }
-        }
-      }else{
-          likedPost.likes++;
-          likedPost.liked.push(this.$store.getters.loggedUser);
-          likedPost.likedByActiveUser = true;
-      }
-  
-      this.$store.dispatch('updatePost', {postId, likedPost});
-    },
     
-  },
-  addComments(postId){
-
+    
   }
 
 }

@@ -30,9 +30,7 @@
     </div>
 </template>
 <script>
-import axios from 'axios'
 import Vue from 'vue'
-import {mapGetters, mapActions} from 'axios'
 
 export default {
     name: 'AddPost',
