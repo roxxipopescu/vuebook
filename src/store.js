@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
+import createPersistedState from "vuex-persistedstate";
 
 Vue.use(Vuex)
 
@@ -9,7 +10,7 @@ const usersURL = "http://localhost:3000/users";
 
 export default new Vuex.Store({
   state: {
-    loggedUser: '', //TODO: use localStorage
+    loggedUser: '', 
     posts: [],
     users: []
   },
@@ -34,7 +35,7 @@ export default new Vuex.Store({
       return state.loggedUser
     },
 
-    updatedPosts: state => {
+    updatedPosts: state => { 
       return state.posts.map(post => {
         post.liked.map(usernameWhoLiked => {
           if (usernameWhoLiked == state.loggedUser) {
@@ -53,6 +54,9 @@ export default new Vuex.Store({
   },
 
   actions: {
+    persistLoggedUser(context, loggedUser){
+      context.commit('newLogIn', loggedUser);
+    },
     async getUsers(state){
       let res = await axios.get(usersURL);
       state.commit('fetchUsers', res.data);
@@ -72,5 +76,6 @@ export default new Vuex.Store({
       let tbu = baseURL + '/' + payload.postId;
       await axios.put(tbu, payload.likedPost);
     }
-  }
+  },
+  plugins: [createPersistedState()]
 })

@@ -63,7 +63,7 @@ export default {
         login(){
           this.users.forEach((user) => {
             if (user.email == this.email && user.password == this.password){
-              this.$store.commit('newLogIn', user.name);
+              this.$store.dispatch('persistLoggedUser', user.name);
               this.$emit("authenticated", true);
               this.$router.replace({ name: "feed" });
             }

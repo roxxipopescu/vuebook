@@ -6,11 +6,10 @@
       },
       "type": "txt",
       "location": "Cluj-Napoca",
-      "likes": 4,
+      "likes": 2,
       "liked": [
-        "Valentin Zaharia",
-        "Gina Firte",
-        "Roxana Popescu"
+        "Roxana Popescu",
+        "Valentin Zaharia"
       ],
       "created_at": "2019-09-05",
       "user_name": "Gina Firte",
@@ -26,7 +25,7 @@
       "location": "Cluj-Napoca",
       "likes": 2,
       "liked": [
-        "Valentin Zaharia",
+        "Gina Firte",
         "Roxana Popescu"
       ],
       "created_at": "2019-09-05",
@@ -36,84 +35,21 @@
     },
     {
       "data": {
-        "content": "sa postam zic"
+        "caption": "it's friday bishez",
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Hipp_hipp_hurra%21_Konstn%C3%A4rsfest_p%C3%A5_Skagen_-_Peder_Severin_Kr%C3%B8yer.jpg/300px-Hipp_hipp_hurra%21_Konstn%C3%A4rsfest_p%C3%A5_Skagen_-_Peder_Severin_Kr%C3%B8yer.jpg"
       },
-      "type": "txt",
-      "location": "Cluj-Napoca",
-      "likes": 2,
-      "liked": [
-        "Valentin Zaharia",
-        "Roxana Popescu"
-      ],
-      "created_at": "2019-09-05",
-      "user_name": "Gina Firte",
-      "user_id": "2",
-      "likedByActiveUser": false,
-      "id": 7
-    },
-    {
-      "data": {
-        "content": "nu stiu ce sa mai postez"
-      },
-      "type": "txt",
+      "type": "img",
       "location": "Cluj-Napoca",
       "likes": 2,
       "liked": [
         "Gina Firte",
-        "Roxana Popescu"
+        "Valentin Zaharia"
       ],
-      "created_at": "2019-09-05",
-      "user_name": "Valentin Zaharia",
-      "user_id": "3",
-      "likedByActiveUser": false,
-      "id": 8
-    },
-    {
-      "data": {
-        "content": "sa vedem postare"
-      },
-      "type": "txt",
-      "location": "Cluj-Napoca",
-      "likes": 1,
-      "liked": [
-        "Gina Firte"
-      ],
-      "created_at": "2019-09-05",
+      "created_at": "2019-09-06",
       "user_name": "Roxana Popescu",
       "user_id": "1",
       "likedByActiveUser": false,
-      "id": 9
-    },
-    {
-      "data": {
-        "content": "ceva post"
-      },
-      "type": "txt",
-      "location": "Cluj-Napoca",
-      "likes": 1,
-      "liked": [
-        "Roxana Popescu"
-      ],
-      "created_at": "2019-09-05",
-      "user_name": "Roxana Popescu",
-      "user_id": "1",
-      "likedByActiveUser": false,
-      "id": 10
-    },
-    {
-      "data": {
-        "content": "sdfs"
-      },
-      "type": "txt",
-      "location": "Cluj-Napoca",
-      "likes": 1,
-      "liked": [
-        ""
-      ],
-      "created_at": "2019-09-05",
-      "user_name": "",
-      "likedByActiveUser": true,
-      "id": 11
+      "id": 7
     }
   ],
   "comments": [

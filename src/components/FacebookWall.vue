@@ -41,7 +41,6 @@
 <script>
 import AddPost from './AddPost'
 import { mapGetters, mapActions } from 'vuex'
-import { setTimeout } from 'timers';
 
 export default {
   name: 'FacebookWall',
